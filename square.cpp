@@ -1,41 +1,64 @@
 #include <stdio.h>
 #include <math.h>
+double SquareSolve(double a, double b, double c,
+                    double* x1, double* x2);
+
+int main()
+{
+    double a = 0, b = 0, c = 0;
+    printf("Enter a, b, c: ");
+    scanf("%lg %lg %lg", &a, &b, &c);
+
+    double x1 = 0, x2 = 0;
+    double SquareSolver_Ans = SquareSolve(a, b, c, &x1, &x2);
+
+    printf("Number of roots: %lg\n", SquareSolver_Ans);
+    if (ans > 0) {
+        printf("Roots: x1 = %lg, x2 = %lg\n", x1, x2);
+    }
+    return 0;
+}
 
 double SquareSolve(double a, double b, double c,
                     double* x1, double* x2)
 {
-    double sqrt_d = 0, d = 0; // todo initialize // todo assert
-    d = b*b - 4*a*c;
+    double sqrt_d = 0, d = b*b - 4*a*c; // todo initialize - Done // todo assert
     if (d < 0) {
-        printf("D < 0\n");
+        printf("No roots, D < 0\n");
+        return 0;
     } else {
         sqrt_d = sqrt(d);
         if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                printf("Infinite number of roots\n");
+                return -1;
+            } else {
+            printf("No roots\n");
+            return 0;
+            }} else {
             *x1 = *x2 = (-c / b);
-            printf("x1 = %p\n", x1);
-            printf("%.2lg\n", *x1);
             return 1;
-        } else {
+        }} else {
             if (sqrt_d == 0) {
                 *x1 = *x2 = (-b / (2*a));
-                printf("%.2lg\n", *x1);
                 return 1;
             } else if (sqrt_d > 0) {
                 *x1 = ((-b + sqrt_d) / (2*a));
                 *x2 = ((-b - sqrt_d) / (2*a));
-                printf("%.2lg\t%.2lg\n", *x1, *x2);
                 return 2;
             }
         }
     }
 }
 
-int main()
+
+
+int Test_SolveSquare()
 {
-    double a = 0, b = 0, c = 0, x1 = 0, x2 = 0;
-    printf("Enter a, b, c:");
-    scanf("%lg %lg %lg", &a, &b, &c);
-    //printf("Amount of roots:");
-    printf("%lg\n", SquareSolve(a, b, c, &x1, &x2));
-    return 0;
+double x1 = 0, x2 = 0;
+int nRoots = SquareSolve(1, -5, 6, &x1, &x2); // 2 3
+if (!(nRoots == 2 && x1 == 2 && x2 == 3)){
+    printf("FAILED: SquareSolve(1, -5, 6...) -> 2; x1 = %lg, x2 = %lg (should be x1 = 2, x2 = 3)\n", x1, x2);
+}
 }

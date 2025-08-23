@@ -1,20 +1,26 @@
 #include <stdio.h>
 #include <math.h>
+#include <assert.h>
 double SquareSolve(double a, double b, double c,
                     double* x1, double* x2);
+int Test_SquareSolve();
+int Swap(double* x1, double* x2);
 
 int main()
 {
+    Test_SquareSolve();
     double a = 0, b = 0, c = 0;
     printf("Enter a, b, c: ");
     scanf("%lg %lg %lg", &a, &b, &c);
+
+
 
     double x1 = 0, x2 = 0;
     double SquareSolver_Ans = SquareSolve(a, b, c, &x1, &x2);
 
     printf("Number of roots: %lg\n", SquareSolver_Ans);
-    if (ans > 0) {
-        printf("Roots: x1 = %lg, x2 = %lg\n", x1, x2);
+    if (SquareSolver_Ans > 0) {
+        printf("Roots: x1 = %.2lf, x2 = %.2lf\n", x1, x2);
     }
     return 0;
 }
@@ -31,16 +37,19 @@ int main()
 //!
 //----------------------------------------------------
 double SquareSolve(double a, double b, double c,
-                    double* x1, double* x2)
+                   double* x1, double* x2)
 {
+    printf("a = %lg\n", a);
+    printf("b = %lg\n", b);
+    printf("c = %lg\n", c);
 
-    assert (std::isfinite (a));
-    assert (std::isfinite (b));
-    assert (std::isfinite (c));
+    assert(std::isfinite (a));
+    assert(std::isfinite (b));
+    assert(std::isfinite (c));
 
-    assert (x1 != NULL);
-    assert (x2 != NULL);
-    assert (x1 != x2);
+    assert(x1 != NULL);
+    assert(x2 != NULL);
+    assert(x1 != x2);
 
     double sqrt_d = 0, d = b*b - 4*a*c; // todo initialize - Done // todo assert
     if (d < 0) {
@@ -66,6 +75,9 @@ double SquareSolve(double a, double b, double c,
             } else if (sqrt_d > 0) {
                 *x1 = ((-b + sqrt_d) / (2*a));
                 *x2 = ((-b - sqrt_d) / (2*a));
+                if (*x1 > *x2) {
+                    Swap(x1, x2);
+                }
                 return 2;
             }
         }
@@ -74,11 +86,23 @@ double SquareSolve(double a, double b, double c,
 
 
 
-int Test_SolveSquare()
+int Test_SquareSolve()
 {
 double x1 = 0, x2 = 0;
 int nRoots = SquareSolve(1, -5, 6, &x1, &x2); // 2 3
 if (!(nRoots == 2 && x1 == 2 && x2 == 3)){
     printf("FAILED: SquareSolve(1, -5, 6...) -> 2; x1 = %lg, x2 = %lg (should be x1 = 2, x2 = 3)\n", x1, x2);
+} else {
+printf("Okay\n");
 }
 }
+
+int Swap(double* x1, double* x2)
+{
+double w = 0;
+w = *x1;
+*x1 = *x2;
+*x2 = w;
+return 0;
+}
+

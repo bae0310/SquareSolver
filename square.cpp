@@ -22,6 +22,15 @@ int main()
 double SquareSolve(double a, double b, double c,
                     double* x1, double* x2)
 {
+
+    assert (std::isfinite (a));
+    assert (std::isfinite (b));
+    assert (std::isfinite (c));
+
+    assert (x1 != NULL);
+    assert (x2 != NULL);
+    assert (x1 != x2);
+    
     double sqrt_d = 0, d = b*b - 4*a*c; // todo initialize - Done // todo assert
     if (d < 0) {
         printf("No roots, D < 0\n");

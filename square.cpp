@@ -18,7 +18,18 @@ int main()
     }
     return 0;
 }
-
+//----------------------------------------------------
+//! Solver for a square equation ax^2 + bx + c = 0
+//!
+//! @param [in]    a    a-coefficient
+//! @param [in]    b    b-coefficient
+//! @param [in]    c    c-coefficient
+//! @param [out]   x1   pointer for 1st root
+//! @param [out]   x2   pointer for 2nd root
+//!
+//! @return Number of roots and the exact roots if they are exist
+//!
+//----------------------------------------------------
 double SquareSolve(double a, double b, double c,
                     double* x1, double* x2)
 {
@@ -30,7 +41,7 @@ double SquareSolve(double a, double b, double c,
     assert (x1 != NULL);
     assert (x2 != NULL);
     assert (x1 != x2);
-    
+
     double sqrt_d = 0, d = b*b - 4*a*c; // todo initialize - Done // todo assert
     if (d < 0) {
         printf("No roots, D < 0\n");

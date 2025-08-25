@@ -11,7 +11,20 @@ struct TestData
     double Rts;
     double x1, x2;
 };
-
+// -------------------------------------------------------
+//! Running SquareSolve-function with certain coefficients and compares received and reference roots
+//!
+//! @param [in]    a    a-coefficient
+//! @param [in]    b    b-coefficient
+//! @param [in]    c    c-coefficient
+//!
+//! @param [in]    Rts   Number of reference roots
+//!
+//! @param [out]   x1   pointer for 1st reference root
+//! @param [out]   x2   pointer for 2nd reference root
+//!
+//! @return             0 -- if received and reference roots are equal ; 1 -- if not
+//-------------------------------------------------------
 int OneTest(TestData test)
 {
     double x1 = 0, x2 = 0;
@@ -22,7 +35,12 @@ int OneTest(TestData test)
         return 0;
     }
 }
-
+// -------------------------------------------------------
+//! Running OneTest-function several times using loop
+//!
+//! @note               Print
+//! @return             Number of failed tests
+//--------------------------------------------------------
 int AllTests()
 {
     int failed = 0;

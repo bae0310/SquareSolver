@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include "math_func.h"
 //! @brief Compares two numbers
 //! @param [in]     x1      1st number for comparation
 //! @param [in]     x1_ref  2nd number for comparation

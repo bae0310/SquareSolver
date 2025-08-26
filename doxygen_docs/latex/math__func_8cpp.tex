@@ -1,25 +1,26 @@
 \doxysection{C\+:/\+Users/yadro/kugk/\+Square\+Solver/code/math\+\_\+func.cpp File Reference}
-\label{math__func_8cpp}\index{C:/Users/yadro/kugk/SquareSolver/code/math\_func.cpp@{C:/Users/yadro/kugk/SquareSolver/code/math\_func.cpp}}
+\hypertarget{math__func_8cpp}{}\label{math__func_8cpp}\index{C:/Users/yadro/kugk/SquareSolver/code/math\_func.cpp@{C:/Users/yadro/kugk/SquareSolver/code/math\_func.cpp}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \textbf{ Equality} (double x1, double x1\+\_\+ref)
+int \mbox{\hyperlink{math__func_8cpp_ab3fb9dadbe7bb1ce97ea5f68d26804ae}{Equality}} (double x1, double x1\+\_\+ref)
 \begin{DoxyCompactList}\small\item\em Compares two numbers. \end{DoxyCompactList}\item 
-int \textbf{ Swap} (double $\ast$x1, double $\ast$x2)
+int \mbox{\hyperlink{math__func_8cpp_a8d3bade660df63c3605ac7b7fb333c98}{Swap}} (double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2)
 \begin{DoxyCompactList}\small\item\em Swaps roots\+: x1, x2 = x2, x1. \end{DoxyCompactList}\item 
-int \textbf{ Solve\+\_\+linear} (double b, double c, double $\ast$x1, double $\ast$x2)
+int \mbox{\hyperlink{math__func_8cpp_ad3c7bccad48f7a0603ab98e8502efc1a}{Solve\+\_\+linear}} (double b, double c, double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2)
 \begin{DoxyCompactList}\small\item\em Solver for a linear equation bx + c = 0. \end{DoxyCompactList}\item 
-int \textbf{ Solve\+\_\+not\+\_\+a\+\_\+linear} (double a, double b, double $\ast$x1, double $\ast$x2, double d)
-\begin{DoxyCompactList}\small\item\em Solver for a square equation ax$^\wedge$2 + bx + c = 0, if a != 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{math__func_8cpp_ac63817e319f305a47037c4f4967a4a37}{Solve\+\_\+not\+\_\+a\+\_\+linear}} (double a, double b, double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2, double d)
+\begin{DoxyCompactList}\small\item\em Solver for a square equation ax\texorpdfstring{$^\wedge$}{\string^}2 + bx + c = 0, if a != 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
+\Hypertarget{math__func_8cpp_doc-func-members}
 \doxysubsection{Function Documentation}
-\index{math\_func.cpp@{math\_func.cpp}!Equality@{Equality}}
+\Hypertarget{math__func_8cpp_ab3fb9dadbe7bb1ce97ea5f68d26804ae}\index{math\_func.cpp@{math\_func.cpp}!Equality@{Equality}}
 \index{Equality@{Equality}!math\_func.cpp@{math\_func.cpp}}
-\doxysubsubsection{Equality()}
+\doxysubsubsection{\texorpdfstring{Equality()}{Equality()}}
 {\footnotesize\ttfamily \label{math__func_8cpp_ab3fb9dadbe7bb1ce97ea5f68d26804ae} 
 int Equality (\begin{DoxyParamCaption}\item[{double}]{x1}{, }\item[{double}]{x1\+\_\+ref}{}\end{DoxyParamCaption})}
 
@@ -37,11 +38,11 @@ Compares two numbers.
 \begin{DoxyReturn}{Returns}
 1 -- if numbers are equal; 0 -- if not 
 \end{DoxyReturn}
-\index{math\_func.cpp@{math\_func.cpp}!Solve\_linear@{Solve\_linear}}
+\Hypertarget{math__func_8cpp_ad3c7bccad48f7a0603ab98e8502efc1a}\index{math\_func.cpp@{math\_func.cpp}!Solve\_linear@{Solve\_linear}}
 \index{Solve\_linear@{Solve\_linear}!math\_func.cpp@{math\_func.cpp}}
-\doxysubsubsection{Solve\_linear()}
+\doxysubsubsection{\texorpdfstring{Solve\_linear()}{Solve\_linear()}}
 {\footnotesize\ttfamily \label{math__func_8cpp_ad3c7bccad48f7a0603ab98e8502efc1a} 
-int Solve\+\_\+linear (\begin{DoxyParamCaption}\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double $\ast$}]{x1}{, }\item[{double $\ast$}]{x2}{}\end{DoxyParamCaption})}
+int Solve\+\_\+linear (\begin{DoxyParamCaption}\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2}{}\end{DoxyParamCaption})}
 
 
 
@@ -67,15 +68,15 @@ Number of roots
 \begin{DoxyNote}{Note}
 -\/1 -- Infinite number of roots; -\/2 -- no roots; 1 -- one root; 
 \end{DoxyNote}
-\index{math\_func.cpp@{math\_func.cpp}!Solve\_not\_a\_linear@{Solve\_not\_a\_linear}}
+\Hypertarget{math__func_8cpp_ac63817e319f305a47037c4f4967a4a37}\index{math\_func.cpp@{math\_func.cpp}!Solve\_not\_a\_linear@{Solve\_not\_a\_linear}}
 \index{Solve\_not\_a\_linear@{Solve\_not\_a\_linear}!math\_func.cpp@{math\_func.cpp}}
-\doxysubsubsection{Solve\_not\_a\_linear()}
+\doxysubsubsection{\texorpdfstring{Solve\_not\_a\_linear()}{Solve\_not\_a\_linear()}}
 {\footnotesize\ttfamily \label{math__func_8cpp_ac63817e319f305a47037c4f4967a4a37} 
-int Solve\+\_\+not\+\_\+a\+\_\+linear (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double $\ast$}]{x1}{, }\item[{double $\ast$}]{x2}{, }\item[{double}]{d}{}\end{DoxyParamCaption})}
+int Solve\+\_\+not\+\_\+a\+\_\+linear (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2}{, }\item[{double}]{d}{}\end{DoxyParamCaption})}
 
 
 
-Solver for a square equation ax$^\wedge$2 + bx + c = 0, if a != 0. 
+Solver for a square equation ax\texorpdfstring{$^\wedge$}{\string^}2 + bx + c = 0, if a != 0. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -96,11 +97,11 @@ Number of roots
 \begin{DoxyNote}{Note}
 0 -- no roots; 1 -- one root; 2 -- two roots; 
 \end{DoxyNote}
-\index{math\_func.cpp@{math\_func.cpp}!Swap@{Swap}}
+\Hypertarget{math__func_8cpp_a8d3bade660df63c3605ac7b7fb333c98}\index{math\_func.cpp@{math\_func.cpp}!Swap@{Swap}}
 \index{Swap@{Swap}!math\_func.cpp@{math\_func.cpp}}
-\doxysubsubsection{Swap()}
+\doxysubsubsection{\texorpdfstring{Swap()}{Swap()}}
 {\footnotesize\ttfamily \label{math__func_8cpp_a8d3bade660df63c3605ac7b7fb333c98} 
-int Swap (\begin{DoxyParamCaption}\item[{double $\ast$}]{x1}{, }\item[{double $\ast$}]{x2}{}\end{DoxyParamCaption})}
+int Swap (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2}{}\end{DoxyParamCaption})}
 
 
 

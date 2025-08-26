@@ -1,10 +1,10 @@
 \doxysection{math\+\_\+func.\+cpp}
-\label{math__func_8cpp_source}\index{C:/Users/yadro/kugk/SquareSolver/code/math\_func.cpp@{C:/Users/yadro/kugk/SquareSolver/code/math\_func.cpp}}
-\textbf{ Go to the documentation of this file.}
+\hypertarget{math__func_8cpp_source}{}\label{math__func_8cpp_source}\index{C:/Users/yadro/kugk/SquareSolver/code/math\_func.cpp@{C:/Users/yadro/kugk/SquareSolver/code/math\_func.cpp}}
+\mbox{\hyperlink{math__func_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <math.h>}}
-\DoxyCodeLine{00007\ \textcolor{keywordtype}{int}\ Equality(\textcolor{keywordtype}{double}\ x1,\ \textcolor{keywordtype}{double}\ x1\_ref)}
+\DoxyCodeLine{00007\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{math__func_8cpp_ab3fb9dadbe7bb1ce97ea5f68d26804ae}{Equality}}(\textcolor{keywordtype}{double}\ x1,\ \textcolor{keywordtype}{double}\ x1\_ref)}
 \DoxyCodeLine{00008\ \{}
 \DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ acceptable\_value\ =\ 0.0001;}
 \DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{if}\ (fabs(x1\ -\/\ x1\_ref)\ <\ acceptable\_value)\ \{}
@@ -13,7 +13,7 @@
 \DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
 \DoxyCodeLine{00014\ \ \ \ \ \}}
 \DoxyCodeLine{00015\ \}}
-\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ Swap(\textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2)}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{math__func_8cpp_a8d3bade660df63c3605ac7b7fb333c98}{Swap}}(\textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2)}
 \DoxyCodeLine{00021\ \{}
 \DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ w\ =\ 0;}
 \DoxyCodeLine{00023\ \ \ \ \ w\ =\ *x1;}
@@ -21,10 +21,10 @@
 \DoxyCodeLine{00025\ \ \ \ \ *x2\ =\ w;}
 \DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
 \DoxyCodeLine{00027\ \}}
-\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ Solve\_linear(\textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2)}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{math__func_8cpp_ad3c7bccad48f7a0603ab98e8502efc1a}{Solve\_linear}}(\textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2)}
 \DoxyCodeLine{00037\ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (Equality(b,\ 0))\ \{}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Equality(c,\ 0))\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{math__func_8cpp_ab3fb9dadbe7bb1ce97ea5f68d26804ae}{Equality}}(b,\ 0))\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{math__func_8cpp_ab3fb9dadbe7bb1ce97ea5f68d26804ae}{Equality}}(c,\ 0))\ \{}
 \DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/2;}
@@ -33,13 +33,13 @@
 \DoxyCodeLine{00045\ \ \ \ \ *x1\ =\ *x2\ =\ -\/c\ /\ b;}
 \DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
 \DoxyCodeLine{00047\ \}}
-\DoxyCodeLine{00056\ \textcolor{keywordtype}{int}\ Solve\_not\_a\_linear(\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{math__func_8cpp_ac63817e319f305a47037c4f4967a4a37}{Solve\_not\_a\_linear}}(\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,}
 \DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2,\ \textcolor{keywordtype}{double}\ d)}
 \DoxyCodeLine{00058\ \{}
 \DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{double}\ sqrt\_d\ =\ sqrt(d);}
 \DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{if}\ (Equality(sqrt\_d,\ 0))\ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Equality(b,\ 0))\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{math__func_8cpp_ab3fb9dadbe7bb1ce97ea5f68d26804ae}{Equality}}(sqrt\_d,\ 0))\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{math__func_8cpp_ab3fb9dadbe7bb1ce97ea5f68d26804ae}{Equality}}(b,\ 0))\ \{}
 \DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ *x2\ =\ 0;}
 \DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ *x2\ =\ -\/b\ /\ (2*a);}
@@ -49,7 +49,7 @@
 \DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ *x1\ =\ (-\/b\ +\ sqrt\_d)\ /\ (2\ *\ a);}
 \DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ *x2\ =\ (-\/b\ -\/\ sqrt\_d)\ /\ (2\ *\ a);}
 \DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*x1\ >\ *x2)\ \{}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ Swap(x1,\ x2);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{math__func_8cpp_a8d3bade660df63c3605ac7b7fb333c98}{Swap}}(x1,\ x2);}
 \DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
 \DoxyCodeLine{00075\ \ \ \ \ \}}

@@ -12,14 +12,12 @@ int main()
 
     printf("Enter a, b, c: ");
     scanf("%lg %lg %lg", &a, &b, &c);
-    printf("a = %lg\n"
-           "b = %lg\n"
-           "c = %lg\n", a, b, c);
 
     double x1 = 0, x2 = 0;
     int Rts = SquareSolve(a, b, c, &x1, &x2);
 
     Output(Rts, x1, x2);
+
     return 0;
 }
 
@@ -38,8 +36,8 @@ int main()
 double SquareSolve(double a, double b, double c,
                    double* x1, double* x2)
 {
-    if (a == 0) {
-       Solve_linear(b, c, x1, x2);
+    if (Equality(a, 0)) {
+       return Solve_linear(b, c, x1, x2); // return надо было написать
     } else {
         double d = b * b - 4 * a * c;
 
@@ -47,10 +45,20 @@ double SquareSolve(double a, double b, double c,
             return 0;
         }
         // d >= 0
-        Solve_not_a_linear(a, b, c, x1, x2);
+        return Solve_not_a_linear(a, b, x1, x2, d); // return надо было написать
     }
 }
-
+//---------------------------------------
+//! This function outputs lines depending on returned by SquareSolve-function value
+//! Contains switch-function
+//!
+//! @param [in]     Rts     returned value; main argument in switch-func
+//! @param [in]     x1      1st root. For output
+//! @param [in]     x2      2nd root. For output
+//!
+//! @note           This function is a way to shorten main-function
+//! @return         0
+//---------------------------------------
 int Output(int Rts, double x1, double x2)
 {
     switch (Rts)

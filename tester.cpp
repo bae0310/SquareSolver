@@ -4,14 +4,12 @@
 
 double SquareSolve(double a, double b, double c,
                    double* x1, double* x2);
-
 struct TestData
 {
     double a, b, c;
     double Rts;
     double x1, x2;
 };
-// -------------------------------------------------------
 //! Running SquareSolve-function with certain coefficients and compares received and reference roots
 //!
 //! @param [in]    a    a-coefficient
@@ -24,23 +22,22 @@ struct TestData
 //! @param [out]   x2   pointer for 2nd reference root
 //!
 //! @return             0 -- if received and reference roots are equal ; 1 -- if not
-//-------------------------------------------------------
 int OneTest(TestData test)
 {
     double x1 = 0, x2 = 0;
     int Rts = SquareSolve(test.a, test.b, test.c, &x1, &x2);
-    if (!(Equation(x1, test.x1) && Equation(x2, test.x2)) && test.Rts == Rts) {
+    if (!(Equality(x1, test.x1) && Equality(x2, test.x2)) && Equality(Rts, test.Rts)) {
         return 1;
     } else {
         return 0;
     }
 }
-// -------------------------------------------------------
-//! Running OneTest-function several times using loop
+//! Creates list, each ___ of the list contains values for OneTest-func.
+//! Runs OneTest-function several times using loop.
+//! Prints number of failed tests and the following lines
 //!
-//! @note               Print
+//!
 //! @return             Number of failed tests
-//--------------------------------------------------------
 int AllTests()
 {
     int failed = 0;

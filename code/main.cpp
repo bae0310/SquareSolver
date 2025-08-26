@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#include "tester.cpp"
+#include "test_func.cpp"
 int Output(int Rts, double x1, double x2);
 
 int main()
@@ -17,12 +17,11 @@ int main()
     int Rts = SquareSolve(a, b, c, &x1, &x2);
 
     Output(Rts, x1, x2);
-
+    printf("COMMIT GITHUB\n");
     return 0;
 }
 
-//!---------------------------------------------------- 
-//! Solver for a square equation ax^2 + bx + c = 0
+//! @brief Solver for a square equation ax^2 + bx + c = 0
 //!
 //! @param [in]    a    a-coefficient
 //! @param [in]    b    b-coefficient
@@ -32,7 +31,6 @@ int main()
 //!
 //! @return Number of roots
 //!
-//!----------------------------------------------------
 double SquareSolve(double a, double b, double c,
                    double* x1, double* x2)
 {
@@ -48,9 +46,8 @@ double SquareSolve(double a, double b, double c,
         return Solve_not_a_linear(a, b, x1, x2, d); // return надо было написать
     }
 }
-//---------------------------------------
-//! This function outputs lines depending on returned by SquareSolve-function value
-//! Contains switch-function
+//! @brief This function outputs lines depending on returned by SquareSolve-function value
+//! @brief Contains switch-function
 //!
 //! @param [in]     Rts     returned value; main argument in switch-func
 //! @param [in]     x1      1st root. For output
@@ -58,7 +55,6 @@ double SquareSolve(double a, double b, double c,
 //!
 //! @note           This function is a way to shorten main-function
 //! @return         0
-//---------------------------------------
 int Output(int Rts, double x1, double x2)
 {
     switch (Rts)

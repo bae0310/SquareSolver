@@ -1,0 +1,53 @@
+\doxysection{test\+\_\+func.\+cpp}
+\label{test__func_8cpp_source}\index{C:/Users/yadro/kugk/SquareSolver/code/test\_func.cpp@{C:/Users/yadro/kugk/SquareSolver/code/test\_func.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}math\_func.cpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keywordtype}{double}\ SquareSolve(\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ c,}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2);}
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }TestData}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{double}\ a,\ b,\ c;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ Rts;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ x1,\ x2;}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ OneTest(TestData\ test)}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ x1\ =\ 0,\ x2\ =\ 0;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ Rts\ =\ SquareSolve(test.a,\ test.b,\ test.c,\ \&x1,\ \&x2);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(Equality(x1,\ test.x1)\ \&\&\ Equality(x2,\ test.x2))\ \&\&\ Equality(Rts,\ test.Rts))\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00031\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ AllTests()}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ failed\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ TestData\ global\_test[6]\ =\ \{\ \{.a\ =\ 1,\ .b\ =\ 5,\ .c\ =\ 6,\ .Rts\ =\ 2,\ .x1\ =\ -\/3,\ .x2\ =\ -\/2\},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{.a\ =\ 1,\ .b\ =\ 4,\ .c\ =\ 4,\ .Rts\ =\ 1,\ .x1\ =\ -\/2,\ .x2\ =\ -\/2\},}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{.a\ =\ 3,\ .b\ =\ 0,\ .c\ =\ 0,\ .Rts\ =\ 1,\ .x1\ =\ 0,\ .x2\ =\ 0\},}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{.a\ =\ 0,\ .b\ =\ 4,\ .c\ =\ 0,\ .Rts\ =\ 1,\ .x1\ =\ -\/0,\ .x2\ =\ -\/0\},}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{.a\ =\ 0,\ .b\ =\ 0,\ .c\ =\ 0,\ .Rts\ =\ -\/1,\ .x1\ =\ 0,\ .x2\ =\ 0\},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{.a\ =\ 0,\ .b\ =\ 0,\ .c\ =\ 3,\ .Rts\ =\ 0,\ .x1\ =\ 0,\ .x2\ =\ 0\}\ \};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ counter\ =\ \textcolor{keyword}{sizeof}(global\_test)\ /\ \textcolor{keyword}{sizeof}(global\_test[0]);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ counter;\ i++)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ failed\ +=\ OneTest(global\_test[i]);}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ printf(\textcolor{stringliteral}{"{}FAILED\ ATTEMPTS:\ \%d\ \ -\/-\/-\/>\ "{}},\ failed);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (failed\ ==\ 0)\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}CORRECT\ FORMULA\(\backslash\)n"{}});}
+\DoxyCodeLine{00058\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}ERROR\(\backslash\)n"{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{return}\ failed;}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+
+\end{DoxyCode}

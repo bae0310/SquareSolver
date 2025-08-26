@@ -32,6 +32,8 @@ int OneTest(TestData test)
         return 0;
     }
 }
+
+
 //! Creates list, each ___ of the list contains values for OneTest-func.
 //! Runs OneTest-function several times using loop.
 //! Prints number of failed tests and the following lines

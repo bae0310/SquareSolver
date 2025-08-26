@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-//! Compares two numbers
+//! @brief Compares two numbers
 //! @param [in]     x1      1st number for comparation
 //! @param [in]     x1_ref  2nd number for comparation
 //! @return 1 -- if numbers are equal; 0 -- if not
@@ -13,7 +13,7 @@ int Equality(double x1, double x1_ref)
         return 0;
     }
 }
-//! Makes always x1 > x2 
+//! @brief Swaps roots: x1, x2 = x2, x1
 //! @param [in]     x1      pointer for 1st root
 //! @param [in]     x2      pointer for 2nd root
 //! @return 0 -- if swap is done
@@ -25,7 +25,7 @@ int Swap(double* x1, double* x2)
     *x2 = w;
     return 0;
 }
-//! Solver for a linear equation bx + c = 0
+//! @brief Solver for a linear equation bx + c = 0
 //! @param [in]   b    b-coefficient
 //! @param [in]   c    c-coefficient
 //! @param [out]  x1   pointer for 1st root
@@ -45,7 +45,7 @@ int Solve_linear(double b, double c, double* x1, double* x2)
     *x1 = *x2 = -c / b;
     return 1;
 }
-//! Solver for a square equation ax^2 + bx + c = 0, if a != 0
+//! @brief Solver for a square equation ax^2 + bx + c = 0, if a != 0
 //! @param [in]   a    a-coefficient
 //! @param [in]   b    b-coefficient
 //! @param [out]  x1   pointer for 1st root

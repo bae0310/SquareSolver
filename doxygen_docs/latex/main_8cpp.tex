@@ -1,0 +1,78 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include "{}tester.\+cpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a78feaf7fbdddd191a5fcfb99208b51f7}{Output}} (int Rts, double x1, double x2)
+\begin{DoxyCompactList}\small\item\em This function outputs lines depending on returned by Square\+Solve-\/function value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+double \mbox{\hyperlink{main_8cpp_a16663d2f711a7898e84e9e69a352dfce}{Square\+Solve}} (double a, double b, double c, double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em Solver for a square equation ax\texorpdfstring{$^\wedge$}{\string^}2 + bx + c = 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a78feaf7fbdddd191a5fcfb99208b51f7}\index{main.cpp@{main.cpp}!Output@{Output}}
+\index{Output@{Output}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}}
+{\footnotesize\ttfamily \label{main_8cpp_a78feaf7fbdddd191a5fcfb99208b51f7} 
+int Output (\begin{DoxyParamCaption}\item[{int}]{Rts}{, }\item[{double}]{x1}{, }\item[{double}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+This function outputs lines depending on returned by Square\+Solve-\/function value. 
+
+Contains switch-\/function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em Rts} & returned value; main argument in switch-\/func \\
+\hline
+\mbox{\texttt{in}}  & {\em x1} & 1st root. For output \\
+\hline
+\mbox{\texttt{in}}  & {\em x2} & 2nd root. For output\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is a way to shorten main-\/function 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a16663d2f711a7898e84e9e69a352dfce}\index{main.cpp@{main.cpp}!SquareSolve@{SquareSolve}}
+\index{SquareSolve@{SquareSolve}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SquareSolve()}{SquareSolve()}}
+{\footnotesize\ttfamily \label{main_8cpp_a16663d2f711a7898e84e9e69a352dfce} 
+double Square\+Solve (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Solver for a square equation ax\texorpdfstring{$^\wedge$}{\string^}2 + bx + c = 0. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em a} & a-\/coefficient \\
+\hline
+\mbox{\texttt{in}}  & {\em b} & b-\/coefficient \\
+\hline
+\mbox{\texttt{in}}  & {\em c} & c-\/coefficient \\
+\hline
+\mbox{\texttt{out}}  & {\em x1} & pointer for 1st root \\
+\hline
+\mbox{\texttt{out}}  & {\em x2} & pointer for 2nd root\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of roots 
+\end{DoxyReturn}

@@ -10,7 +10,7 @@ struct TestData
     double Rts;
     double x1, x2;
 };
-//! Running SquareSolve-function with certain coefficients and compares received and reference roots
+//! @brief Running SquareSolve-function with certain coefficients and compares received and reference roots
 //!
 //! @param [in]    a    a-coefficient
 //! @param [in]    b    b-coefficient
@@ -33,10 +33,9 @@ int OneTest(TestData test)
     }
 }
 
-
-//! Creates list, each ___ of the list contains values for OneTest-func.
-//! Runs OneTest-function several times using loop.
-//! Prints number of failed tests and the following lines
+//! @brief Creates list, each ___ of the list contains values for OneTest-func.
+//! @brief Runs OneTest-function several times using loop.
+//! @brief Prints number of failed tests and the following lines
 //!
 //!
 //! @return             Number of failed tests

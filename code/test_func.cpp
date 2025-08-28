@@ -3,32 +3,6 @@
 #include "math_func.h"
 #include "test_func.h"
 
-//! @brief Solver for a square equation ax^2 + bx + c = 0
-//!
-//! @param [in]    a    a-coefficient
-//! @param [in]    b    b-coefficient
-//! @param [in]    c    c-coefficient
-//! @param [out]   x1   pointer for 1st root
-//! @param [out]   x2   pointer for 2nd root
-//!
-//! @return Number of roots
-//!
-int SquareSolve(double a, double b, double c,
-                   double* x1, double* x2)
-{
-    if (Equality(a, 0)) {
-       return Solve_linear(b, c, x1, x2); // return надо было написать
-    } else {
-        double d = b * b - 4 * a * c;
-
-        if (d < 0) {
-            return 0;
-        }
-        // d >= 0
-        return Solve_not_a_linear(a, b, x1, x2, d); // return надо было написать
-    }
-}
-
 //! @brief Running SquareSolve-function with certain coefficients and compares received and reference roots
 //!
 //! @param [in]    a    a-coefficient
@@ -44,7 +18,7 @@ int SquareSolve(double a, double b, double c,
 int OneTest(TestData test)
 {
     double x1 = 0, x2 = 0;
-    int Rts = SquareSolve(test.a, test.b, test.c, &x1, &x2);
+    int Rts = SquareSolve(test.a, test.b, test.c, &x1, &x2, test.NoRV);
     if (!(Equality(x1, test.x1) && Equality(x2, test.x2)) && Equality(Rts, test.Rts)) {
         return 1;
     } else {

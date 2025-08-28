@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 
+#include <assert.h>
 #include "test_func.h"
-#include "wtf.h"
+#include "math_func.h"
 
 int Output(int Rts, double x1, double x2);
 
@@ -13,16 +14,15 @@ int main()
     AllTests();
 
     printf("Enter a, b, c: ");
-    scanf("%lg %lg %lg", &a, &b, &c);
+    int NoRV = scanf("%lg %lg %lg", &a, &b, &c);
 
     double x1 = 0, x2 = 0;
-    int Rts = SquareSolve(a, b, c, &x1, &x2);
+    int Rts = SquareSolve(a, b, c, &x1, &x2, NoRV);
 
     Output(Rts, x1, x2);
     printf("COMMIT GITHUB\n");
     return 0;
 }
-
 
 //! @brief This function outputs lines depending on returned by SquareSolve-function value
 //! @brief Contains switch-function

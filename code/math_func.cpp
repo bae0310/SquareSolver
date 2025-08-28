@@ -1,6 +1,45 @@
 #include <stdio.h>
 #include <math.h>
+#include <cmath>
+#include <assert.h>
+#include "test_func.h"
 #include "math_func.h"
+
+//! @brief Solver for a square equation ax^2 + bx + c = 0
+//!
+//! @param [in]    a    a-coefficient
+//! @param [in]    b    b-coefficient
+//! @param [in]    c    c-coefficient
+//! @param [out]   x1   pointer for 1st root
+//! @param [out]   x2   pointer for 2nd root
+//!
+//! @return Number of roots
+int SquareSolve(double a, double b, double c,
+                   double* x1, double* x2, int NoRV)
+{
+// assert (std::isfinite (a));
+// assert (std::isfinite (b));
+// assert (std::isfinite (c));
+//
+// assert (x1 != NULL);
+// assert (x2 != NULL);
+// assert (x1 != x2);
+    if (NoRV < 3) {
+        return -3;
+    }
+    if (Equality(a, 0)) {
+       return Solve_linear(b, c, x1, x2);
+    } else {
+        double d = b * b - 4 * a * c;
+
+        if (d < 0) {
+            return 0;
+        }
+        // d >= 0
+        return Solve_not_a_linear(a, b, x1, x2, d); // return надо было написать
+    }
+}
+
 //! @brief Compares two numbers
 //! @param [in]     x1      1st number for comparation
 //! @param [in]     x1_ref  2nd number for comparation
@@ -31,9 +70,8 @@ int Swap(double* x1, double* x2)
 //! @param [in]   c    c-coefficient
 //! @param [out]  x1   pointer for 1st root
 //! @param [out]  x2   pointer for 2nd root
-//! @note -1 -- infinite number of roots; -2 -- no roots; 0 -- no roots; 1 -- one root;
 //! @return Number of roots
-//! @note -1 -- Infinite number of roots; -2 -- no roots; 1 -- one root;
+//! @note -1 -- Infinite number of roots; -2 -- no roots, D < 0; 1 -- one root;
 int Solve_linear(double b, double c, double* x1, double* x2)
 {
     if (Equality(b, 0)) {

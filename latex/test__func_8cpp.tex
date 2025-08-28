@@ -1,0 +1,62 @@
+\doxysection{C\+:/\+Users/yadro/kugk/\+Square\+Solver/code/test\+\_\+func.cpp File Reference}
+\label{test__func_8cpp}\index{C:/Users/yadro/kugk/SquareSolver/code/test\_func.cpp@{C:/Users/yadro/kugk/SquareSolver/code/test\_func.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include "{}math\+\_\+func.\+h"{}}\newline
+{\ttfamily \#include "{}test\+\_\+func.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ One\+Test} (\textbf{ Test\+Data} test)
+\begin{DoxyCompactList}\small\item\em Running Square\+Solve-\/function with certain coefficients and compares received and reference roots. \end{DoxyCompactList}\item 
+int \textbf{ All\+Tests} ()
+\begin{DoxyCompactList}\small\item\em Creates list, each \+\_\+\+\_\+\+\_\+ of the list contains values for One\+Test-\/func. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\doxysubsection{Function Documentation}
+\index{test\_func.cpp@{test\_func.cpp}!AllTests@{AllTests}}
+\index{AllTests@{AllTests}!test\_func.cpp@{test\_func.cpp}}
+\doxysubsubsection{AllTests()}
+{\footnotesize\ttfamily \label{test__func_8cpp_a0ced21d806f6e0ad82d12758f1b6647a} 
+int All\+Tests (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates list, each \+\_\+\+\_\+\+\_\+ of the list contains values for One\+Test-\/func. 
+
+Runs One\+Test-\/function several times using loop.
+
+Prints number of failed tests and the following lines
+
+\begin{DoxyReturn}{Returns}
+Number of failed tests 
+\end{DoxyReturn}
+\index{test\_func.cpp@{test\_func.cpp}!OneTest@{OneTest}}
+\index{OneTest@{OneTest}!test\_func.cpp@{test\_func.cpp}}
+\doxysubsubsection{OneTest()}
+{\footnotesize\ttfamily \label{test__func_8cpp_a53c84edaad413d5a5a6f93c3c3696824} 
+int One\+Test (\begin{DoxyParamCaption}\item[{\textbf{ Test\+Data}}]{test}{}\end{DoxyParamCaption})}
+
+
+
+Running Square\+Solve-\/function with certain coefficients and compares received and reference roots. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em a} & a-\/coefficient \\
+\hline
+\mbox{\texttt{in}}  & {\em b} & b-\/coefficient \\
+\hline
+\mbox{\texttt{in}}  & {\em c} & c-\/coefficient\\
+\hline
+\mbox{\texttt{in}}  & {\em Rts} & Number of reference roots\\
+\hline
+\mbox{\texttt{out}}  & {\em x1} & pointer for 1st reference root \\
+\hline
+\mbox{\texttt{out}}  & {\em x2} & pointer for 2nd reference root\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -- if received and reference roots are equal ; 1 -- if not 
+\end{DoxyReturn}
